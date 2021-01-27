@@ -5,20 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## Ruby version
+2.6.6
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Configuration
+1. fill `config/database.yml` using `config/database.yml.example` file
+1. `gem install bundler`
+1. `bundle install`
+1. `rake db:create`
+1. `rake db:migrate`
+1. `rake db:seed`

@@ -1,0 +1,44 @@
+fr:
+  activerecord:
+    models:
+      users/profile:
+        one: "Profil utilisateur"
+        other: "Profils utilisateurs"
+    attributes:
+      users/profile:
+        first_name: Prénom
+        last_name: Nom
+        email: E-mail
+        birthdate: Date de naissance
+        birthplace: Lieu de naissance
+        nationality: Nationalité
+        salary: Salaire net annuel
+        patrimony: Patrimoine
+        contract_type: Type de contrat
+        address: Adresse
+        bic: BIC
+        iban: IBAN
+        matrimonial_situation: Situation matrimoniale
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        habitat_type: Type d'habitat
+        habitat_status: Status d'habitation
+
+  enumerize:
+    users/profile:
+      matrimonial_situation:
+        common_law: Union libre
+        divorced: Divorcé(e)
+        widowed: Veuf(ve)
+        maried: Marié(e)
+        single: Célibataire
+        pacs: PACS
+
+      habitat_type:
+        house: Maison
+        flat: Appartement
+
+      habitat_status:
+        owner: Propriétaire
+        tenant: Locataire
+        hosted_for_free: Hébergé gratuitement

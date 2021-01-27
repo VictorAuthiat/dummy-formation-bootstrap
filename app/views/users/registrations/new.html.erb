@@ -1,0 +1,35 @@
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input(:email, required: true, input_html: { autocomplete: 'email' }) %>
+  <%= f.input(:password, required: true, input_html: { autocomplete: 'new-password' }) %>
+  <%= f.input(:password_confirmation, required: true, input_html: { autocomplete: 'password-confirmation' }) %>
+
+  <%= f.simple_fields_for(:profile, f.object.build_profile) do |ff| %>
+    <%= ff.input(:first_name, required: true) %>
+    <%= ff.input(:last_name, required: true) %>
+    <%= ff.input(:birthdate, as: :date, html5: true, required: true) %>
+    <%= ff.input(:birthplace, as: :country, priority: ['France']) %>
+    <%= ff.input(:nationality, as: :country, priority: ['France']) %>
+    <%= ff.input(:matrimonial_situation, as: :select) %>
+    <%= ff.input(:habitat_status, as: :radio_buttons) %>
+    <%= ff.input(:habitat_type, as: :select) %>
+    <%= ff.input(:address) %>
+    <%= ff.input(:city) %>
+    <%= ff.input(:zip_code) %>
+    <%= ff.input(:iban) %>
+    <%= ff.input(:patrimony) %>
+    <%= ff.input(:salary) %>
+    <%= ff.input(:contract_type) %>
+
+    <% Users::Profiles::Document::DOCUMENT_TYPES.each do |document_name| %>
+      <%= ff.simple_fields_for(:documents, ff.object.documents.build(name: document_name)) do |fff| %>
+        <%= fff.hidden_field(:name) %>
+        <%= fff.hidden_field(:document, value: fff.object.cached_file_data) %>
+        <%= fff.input(:file, as: :file, label: t("enumerize.users/profiles/document.name.#{document_name}")) %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= f.button(:submit, t('.next_step')) %>
+<% end %>

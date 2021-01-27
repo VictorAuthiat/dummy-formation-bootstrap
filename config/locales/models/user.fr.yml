@@ -1,0 +1,14 @@
+fr:
+  activerecord:
+    models:
+      user:
+        one: "Utilisateur"
+        other: "Utilisateurs"
+
+    attributes:
+      user:
+        email: Courriel
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        created_at: Date de création
+        updated_at: Date de mise à jour
