@@ -6,6 +6,12 @@ class User < ApplicationRecord
 
   extend Enumerize
 
+  include FileUploader::Attachment.new(:proof_of_identity)
+  include FileUploader::Attachment.new(:proof_of_residence)
+  include FileUploader::Attachment.new(:employment_contract)
+  include FileUploader::Attachment.new(:last_three_pay_slips)
+  include FileUploader::Attachment.new(:bank_identity_statement)
+
   MATRIMONIAL_SITUATIONS = %i[
     common_law
     divorced
