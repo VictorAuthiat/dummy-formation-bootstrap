@@ -18,6 +18,8 @@ class User < ApplicationRecord
   HABITAT_STATUS = %i[owner tenant hosted_for_free].freeze
   HABITAT_TYPES = %i[house flat].freeze
 
+  has_many :articles, dependent: :destroy
+
   enumerize(:matrimonial_situation, in: MATRIMONIAL_SITUATIONS)
   enumerize(:habitat_status, in: HABITAT_STATUS)
   enumerize(:habitat_type, in: HABITAT_TYPES)

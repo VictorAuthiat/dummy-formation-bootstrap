@@ -1,0 +1,14 @@
+fr:
+  activerecord:
+    models:
+      article:
+        one: Article
+        other: Articles
+
+    attributes:
+      article:
+        title: Titre
+        picture: Image
+        label: Étiquette
+        content: Contenu
+        published_at: Date de publication
