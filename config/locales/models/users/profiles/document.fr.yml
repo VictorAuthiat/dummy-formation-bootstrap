@@ -1,0 +1,22 @@
+fr:
+  activerecord:
+    models:
+      users/profiles/document:
+        one: Document du profil
+        other: Documents du profil
+
+    attributes:
+      users/profiles/document:
+        name: Nom
+        file: Fichier
+        created_at: Date de création
+        updated_at: Date de mise à jour
+
+  enumerize:
+    users/profiles/document:
+      name:
+        proof_of_identity: Justificatif d'identité
+        proof_of_residence: Justificatif de domicile
+        employment_contract: Contrat de travail
+        last_three_pay_slips: 3 derniers bulletins de salaire
+        bank_identity_statement: Relevé d'identité bancaire

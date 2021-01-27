@@ -15,20 +15,18 @@ gem 'sass-rails', '>= 6'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
+# Use Active Model has_secure_passwordpry
 # gem 'bcrypt', '~> 3.1.7'
-
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'bootstrap', '~> 4.5.3'
 gem 'country_select', '~> 4.0.0'
 gem 'devise', '~> 4.7.3'
 gem 'enumerize', '~> 2.3.1'
+gem 'factory_bot_rails', '~> 5.1'
 gem 'faker', '~> 2.12.0'
-gem 'shrine', '~> 2.19.4'
+gem 'image_processing', '~> 1.12.1'
+gem 'shrine', '~> 3.3.0'
 gem 'simple_form', '~> 5.0.2'
 gem 'sprockets', '~> 4.0.2'
 gem 'uglifier'
@@ -36,6 +34,7 @@ gem 'uglifier'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
